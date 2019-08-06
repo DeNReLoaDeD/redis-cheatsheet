@@ -2,13 +2,16 @@
 # All the commands you need to know
 
 
-redis-server /path/redis.conf  # start redis with the related configuration file
-redis-cli                      # opens a redis prompt
+redis-server /path/redis.conf       # start redis with the related configuration file
+redis-cli                           # opens a redis prompt
+redis-cli --bigkeys                 # get biggest keys of redis
+redis-cli -h redis.customhost.com   # open redis prompt in given host
 
+# memory management
+info memory                         # get cluster memory info (usage, heap, etc)
+memory usage key                    # memory usage of the given key in bytes
 
 # Strings.
-
-
 APPEND key value                  # append a value to a key
 BITCOUNT key [start end]          # count set bits in a string
 SET key value                     # set value in key
